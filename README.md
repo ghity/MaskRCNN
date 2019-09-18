@@ -19,10 +19,7 @@ This dataset was created from 3D-reconstructed spaces captured by our customers 
 
 # Getting Started
 * [demo.ipynb](samples/demo.ipynb) Is the easiest way to start. It shows an example of using a model pre-trained on MS COCO to segment objects in your own images.
-It includes code to run object detection and instance segmentation on arbitrary images.
-
-* [train_shapes.ipynb](samples/shapes/train_shapes.ipynb) shows how to train Mask R-CNN on your own dataset. This notebook introduces a toy dataset (Shapes) to demonstrate training on a new dataset.
-
+It includes code to run object detection and instanc* [train_shapes.ipynb](samples/shapes/train_shapes.ipynb) shows how to train Mask R-CNN on your own dataset. This notebook introduces a toy dataset (Shapes) to demonstrate training on a new dataset.
 * ([model.py](mrcnn/model.py), [utils.py](mrcnn/utils.py), [config.py](mrcnn/config.py)): These files contain the main Mask RCNN implementation. 
 
 
@@ -38,8 +35,8 @@ This notebooks inspects the weights of a trained model and looks for anomalies a
 # Step by Step Detection
 To help with debugging and understanding the model, there are 3 notebooks 
 ([inspect_data.ipynb](samples/coco/inspect_data.ipynb), [inspect_model.ipynb](samples/coco/inspect_model.ipynb),
-[inspect_weights.ipynb](samples/coco/inspect_weights.ipynb)) that provide a lot of visualizations and allow running the model step by step to inspect the output at each point. Here are a few examples:
-
+[inspect_weights.ipynb] （samples / coco / inspect_weights.ipynb））提供了大量可視化，並允許逐步運行模型以檢查每個點的輸出。這裡有一些例子：
+4
 
 
 ## 1. Anchor sorting and filtering
@@ -138,10 +135,7 @@ and only 0.01% differed by 10px or more.
 too high, and often causes the weights to explode, especially when using a small batch
 size. It might be related to differences between how Caffe and TensorFlow compute 
 gradients (sum vs mean across batches and GPUs). Or, maybe the official model uses gradient
-clipping to avoid this issue. We do use gradient clipping, but don't set it too aggressively.
-We found that smaller learning rates converge faster anyway so we go with that.
-
-## Citation
+clipping to avoid this issue. We do use gradient clipping, but don't set it too aggres
 Use this bibtex to cite this repository:
 ```
 @misc{matterport_maskrcnn_2017,
